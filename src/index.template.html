@@ -23,6 +23,7 @@
 <meta name="twitter:title" content="Porchlight Ledger | Simple tools for household money">
 <meta name="twitter:description" content="Budget, debt payoff and savings spreadsheets for Google Sheets and Excel, plus printable PDFs.">
 <meta name="twitter:image" content="https://porchlightledger.com/img/og-image.jpg">
+{{JSONLD}}
 <link rel="preload" href="fonts/dm-serif-display.woff" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="styles.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Porchlight Ledger","url":"https://porchlightledger.com/","logo":"https://porchlightledger.com/apple-touch-icon.png","email":"hello@porchlightledger.com","sameAs":["https://www.etsy.com/shop/PorchlightLedger","https://www.instagram.com/porchlightledger/","https://www.tiktok.com/@joshuawildman4","https://x.com/JoshuaWildman7"]}</script>
@@ -33,9 +34,11 @@
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="Porchlight Ledger home"><img src="favicon.svg" alt="" width="32" height="32"> Porchlight Ledger</a>
     <nav aria-label="Main">
+      <a href="#holiday">Holiday</a>
       <a href="#planners">Planners</a>
       <a href="#bundle">Bundle</a>
       <a href="#shop">Shop</a>
+      <a href="#faq">FAQ</a>
       <a href="#free">Free worksheet</a>
       <a class="btn btn-small" href="https://www.etsy.com/shop/PorchlightLedger" target="_blank" rel="noopener">Shop on Etsy</a>
     </nav>
@@ -48,10 +51,11 @@
   <div class="wrap hero-grid">
     <div>
       <p class="eyebrow">Budget &amp; debt payoff spreadsheets</p>
-      <h1>Leave the light on for your money.</h1>
-      <p class="lead">Porchlight Ledger makes simple, good-looking planners for everyday household money: budgets, debt payoff, savings and bills. They work in Google Sheets and Excel, and come with printable PDFs.</p>
+      <h1>Planners you'll actually open.</h1>
+      <p class="lead">We're a family making the planners we use ourselves, for the everyday money and home details that deserve a clear place.</p>
+      <p>Simple spreadsheets for Google Sheets and Excel, with printable PDFs. Type into the yellow cells and the math is done for you.</p>
       <div class="cta-row">
-        <a class="btn" href="#planners">See the planners</a>
+        <a class="btn" href="#planners">Find your planner</a>
         <a class="btn btn-ghost" href="#free">Get the free worksheet</a>
       </div>
       <ul class="ticks">
@@ -61,6 +65,25 @@
       </ul>
     </div>
     <img class="hero-img" src="img/debt-payoff.jpg" alt="Debt Payoff Planner spreadsheet showing a debt-free date and payment schedule" width="800" height="600">
+  </div>
+</section>
+
+<!-- Seasonal pick -->
+<section class="seasonal" id="holiday" aria-labelledby="holiday-h">
+  <div class="wrap seasonal-grid">
+    <img src="img/included-holiday-budget.jpg" alt="What's included in the Holiday Budget and Gift Planner" width="1000" height="750" loading="lazy">
+    <div>
+      <p class="badge">This season's pick</p>
+      <h2 id="holiday-h">Holiday Budget and Gift Planner</h2>
+      <p>Give each person a gift budget, add gift ideas and what you actually paid, and see planned, spent and left for everyone. Food, travel, cards, decor and hosting go on the same holiday budget, so nothing sneaks up on you.</p>
+      <ul class="ticks ticks-col">
+        <li>Gift budgets for up to 40 people</li>
+        <li>“Last day to order” dates with a days-left countdown</li>
+        <li>Printable gift list, card list and countdown checklist</li>
+      </ul>
+      <p class="bundle-price"><span class="price big">$5.99</span></p>
+      <a class="btn" href="https://www.etsy.com/listing/4587778812" target="_blank" rel="noopener">Buy on Etsy</a>
+    </div>
   </div>
 </section>
 
@@ -74,7 +97,7 @@
       <div class="pain"><h3>“Will I ever be debt-free?”</h3><p>Minimum payments feel endless when you can't see an end date.</p></div>
       <div class="pain"><h3>“I forgot about that bill.”</h3><p>Car registration, insurance, holidays: predictable costs that still catch you off guard.</p></div>
     </div>
-    <p class="bridge">Our planners put everything on one page so you can see it, plan it and stop worrying about it.</p>
+    <p class="bridge">Our planners are simple on purpose: realistic numbers, one clear place for each job, and no app to learn. That makes them easy to come back to next week.</p>
   </div>
 </section>
 
@@ -89,6 +112,12 @@
       <div class="fit"><h3>“That bill caught me off guard.”</h3><p>Plan for due dates and once-a-year costs.</p><ul><li>{{LINK:4587769437}}</li><li>{{LINK:4587772765}}</li><li>{{LINK:4587778812}}</li></ul></div>
       <div class="fit"><h3>“Am I making progress?”</h3><p>Watch savings grow and debt shrink.</p><ul><li>{{LINK:4587778214}}</li><li>{{LINK:4587773147}}</li><li>{{LINK:4587779330}}</li></ul></div>
     </div>
+    <h3 class="included-title">See exactly what's included</h3>
+    <div class="included-grid">
+      <figure><a href="#p-4587773080"><img src="img/included-debt-payoff.jpg" alt="What's included in the Debt Payoff Planner" width="1000" height="750" loading="lazy"></a><figcaption>{{LINK:4587773080}}</figcaption></figure>
+      <figure><a href="#p-4587815514"><img src="img/included-paycheck-budget.jpg" alt="What's included in the Paycheck Budget Planner" width="1000" height="750" loading="lazy"></a><figcaption>{{LINK:4587815514}}</figcaption></figure>
+      <figure><a href="#p-4587769437"><img src="img/included-sinking-funds.jpg" alt="What's included in the Sinking Funds Tracker" width="1000" height="750" loading="lazy"></a><figcaption>{{LINK:4587769437}}</figcaption></figure>
+    </div>
     <p class="center"><a class="btn btn-ghost" href="#shop">Browse all {{COUNT}} items</a></p>
   </div>
 </section>
@@ -96,18 +125,18 @@
 <!-- 4. Bundle -->
 <section id="bundle" class="bundle">
   <div class="wrap bundle-grid">
-    <img src="img/bundle.jpg" alt="Budget Spreadsheet Bundle with six matching templates" width="800" height="600" loading="lazy">
+    <img src="img/included-bundle.jpg" alt="What's included in the Household Finance Bundle: six matching templates" width="1000" height="750" loading="lazy">
     <div>
-      <p class="badge">Best value</p>
-      <h2>Budget Spreadsheet Bundle</h2>
-      <p class="lead">Six matching templates in one download: Debt Payoff Planner, Monthly Budget Planner, Sinking Funds Tracker, Mortgage Payoff Calculator, Net Worth Tracker and Bill Payment Tracker.</p>
-      <ul class="ticks">
+      <p class="badge">All-in-one</p>
+      <h2>Household Finance Bundle</h2>
+      <p class="lead">Everything in one download: a monthly budget, a debt payoff plan, sinking funds, a mortgage payoff calculator, a net worth dashboard and a bill tracker.</p>
+      <ul class="ticks ticks-col">
+        <li>Six matching templates, one consistent design</li>
         <li>Blank file, filled-in example and printable PDF for each</li>
         <li>US Letter and A4 printables</li>
-        <li>$40.94 if bought separately</li>
       </ul>
-      <p class="bundle-price"><span class="price big">$19.99</span> <span class="save">Save over 50%</span></p>
-      <a class="btn" href="https://www.etsy.com/listing/4587781978" target="_blank" rel="noopener">View the bundle on Etsy</a>
+      <p class="bundle-price"><span class="price big">$19.99</span> <span class="save">$40.94 if bought separately</span></p>
+      <a class="btn" href="https://www.etsy.com/listing/4587781978" target="_blank" rel="noopener">Buy the bundle on Etsy</a>
     </div>
   </div>
 </section>
@@ -128,24 +157,41 @@
     <ol class="steps">
       <li><span class="num">1</span><h3>Download</h3><p>Buy on Etsy and download the files right away from your Purchases page. Nothing is shipped.</p></li>
       <li><span class="num">2</span><h3>Open</h3><p>Open the .xlsx in Excel, or upload it to Google Drive and choose File › Save as Google Sheets.</p></li>
-      <li><span class="num">3</span><h3>Fill in the yellow cells</h3><p>Start on the “Start Here” tab and type into the pale-yellow cells. Everything else calculates for you.</p></li>
+      <li><span class="num">3</span><h3>Fill in the yellow cells</h3><p>Start on the “Start Here” tab and fill in the pale-yellow cells. Everything else calculates for you.</p></li>
     </ol>
     <p class="center muted">Prefer paper? Every planner includes printable PDF pages.</p>
   </div>
 </section>
 
+<!-- FAQ -->
+<section id="faq" class="faq">
+  <div class="wrap narrow">
+    <h2>Questions</h2>
+    <details><summary>Will it work on my computer?</summary><p>Works in Microsoft Excel 2010 or newer (Windows and Mac) and Google Sheets (free). Apple Numbers and LibreOffice not fully tested.</p></details>
+    <details><summary>How do I open it in Google Sheets?</summary><p>Upload the .xlsx to Google Drive, open it, then choose File &gt; Save as Google Sheets. In Excel, just open the .xlsx file.</p></details>
+    <details><summary>Where do I start?</summary><p>Start on the “Start Here” tab and fill in the pale-yellow cells. Everything else calculates for you. Each planner also comes with an example file filled with sample data so you can see how it works.</p></details>
+    <details><summary>Can I print it?</summary><p>Yes. Every planner includes printable PDF pages in US Letter and A4. Print them at home or at a print shop.</p></details>
+    <details><summary>How do I get my files?</summary><p>Download them from your Etsy Purchases page right after checkout. It's a digital download only, so nothing is shipped.</p></details>
+    <details><summary>Is this financial advice?</summary><p>No. These are planning and tracking tools only, not financial advice. The planner adds up the numbers you type; it doesn't tell you what to spend, save or pay.</p></details>
+    <details><summary>Still have a question?</summary><p>Email us at <a href="mailto:hello@porchlightledger.com">hello@porchlightledger.com</a>.</p></details>
+  </div>
+</section>
+
 <!-- 6. Free worksheet (Kit) -->
 <section id="free" class="free">
-  <div class="wrap narrow free-box">
-    <p class="eyebrow light">Free download</p>
-    <h2>Free Debt Snowball Worksheet</h2>
-    <p>A one-page printable: list your debts smallest to largest, roll each payment into the next, and write down your debt-free date. Enter your email and we'll send it over.</p>
-    <form class="signup" action="https://app.kit.com/forms/9997857/subscriptions" method="post">
-      <label class="sr" for="email">Email address</label>
-      <input id="email" type="email" name="email_address" placeholder="you@example.com" required autocomplete="email">
-      <button class="btn btn-warm" type="submit">Send me the worksheet</button>
-    </form>
-    <p class="fine">You'll get occasional budgeting tips and shop news. Unsubscribe anytime. <a href="privacy.html">Privacy</a>. Form not working? <a href="https://porchlight-ledger.kit.com/16208810d1" target="_blank" rel="noopener">Get it here</a>.</p>
+  <div class="wrap free-grid">
+    <img class="free-img" src="img/debt-snowball-worksheet-preview.jpg" alt="Preview of the free one-page Debt Snowball Worksheet" width="695" height="900" loading="lazy">
+    <div>
+      <p class="eyebrow light">Free download</p>
+      <h2>Free Debt Snowball Worksheet</h2>
+      <p>A one-page printable: list your debts smallest to largest, roll each payment into the next, and write down your debt-free date. Then use the tracker to watch your balances drop month by month.</p>
+      <form class="signup" action="https://app.kit.com/forms/9997857/subscriptions" method="post">
+        <label class="sr" for="email">Email address</label>
+        <input id="email" type="email" name="email_address" placeholder="you@example.com" required autocomplete="email">
+        <button class="btn btn-warm" type="submit">Send me the worksheet</button>
+      </form>
+      <p class="fine">You'll get occasional budgeting tips and shop news. Unsubscribe anytime. <a href="privacy.html">Privacy</a>. Form not working? <a href="https://porchlight-ledger.kit.com/16208810d1" target="_blank" rel="noopener">Get it here</a>.</p>
+    </div>
   </div>
 </section>
 
