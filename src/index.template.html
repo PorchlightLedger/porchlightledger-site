@@ -35,6 +35,7 @@
     <nav aria-label="Main">
       <a href="#planners">Planners</a>
       <a href="#bundle">Bundle</a>
+      <a href="#shop">Shop</a>
       <a href="#free">Free worksheet</a>
       <a class="btn btn-small" href="https://www.etsy.com/shop/PorchlightLedger" target="_blank" rel="noopener">Shop on Etsy</a>
     </nav>
@@ -77,18 +78,18 @@
   </div>
 </section>
 
-<!-- 3. Planners -->
+<!-- 3. Planners: pick by problem (links into the Shop, no duplicate cards) -->
 <section id="planners" class="planners">
   <div class="wrap">
-    <h2>The planners</h2>
-    <p class="section-lead">Each one does a single job well. Pick the one that fits the problem you're facing right now.</p>
-    <div class="grid">
-{{MONEY}}
+    <h2>A planner for each money problem</h2>
+    <p class="section-lead">Each planner does one job well. Start with the problem you're facing right now.</p>
+    <div class="fit-grid">
+      <div class="fit"><h3>“Where did my paycheck go?”</h3><p>Give every dollar a job before the month starts.</p><ul><li>{{LINK:4587774776}}</li><li>{{LINK:4587815514}}</li></ul></div>
+      <div class="fit"><h3>“Will I ever be debt-free?”</h3><p>See your payoff order and your debt-free date.</p><ul><li>{{LINK:4587773080}}</li><li>{{LINK:4587775360}}</li></ul></div>
+      <div class="fit"><h3>“That bill caught me off guard.”</h3><p>Plan for due dates and once-a-year costs.</p><ul><li>{{LINK:4587769437}}</li><li>{{LINK:4587772765}}</li><li>{{LINK:4587778812}}</li></ul></div>
+      <div class="fit"><h3>“Am I making progress?”</h3><p>Watch savings grow and debt shrink.</p><ul><li>{{LINK:4587778214}}</li><li>{{LINK:4587773147}}</li><li>{{LINK:4587779330}}</li></ul></div>
     </div>
-    <h3 class="more-title">Also in the shop: home and family records</h3>
-    <div class="mini-grid">
-{{HOME}}
-    </div>
+    <p class="center"><a class="btn btn-ghost" href="#shop">Browse all {{COUNT}} items</a></p>
   </div>
 </section>
 
@@ -108,6 +109,15 @@
       <p class="bundle-price"><span class="price big">$19.99</span> <span class="save">Save over 50%</span></p>
       <a class="btn" href="https://www.etsy.com/listing/4587781978" target="_blank" rel="noopener">View the bundle on Etsy</a>
     </div>
+  </div>
+</section>
+
+<!-- Shop: every Etsy item (generated from src/build.py) -->
+<section id="shop" class="shop">
+  <div class="wrap">
+    <h2>Shop all planners</h2>
+    <p class="section-lead">Every item is an instant digital download for Google Sheets and Excel, with printable PDFs. Checkout happens securely on Etsy for now.</p>
+{{SHOP}}
   </div>
 </section>
 
