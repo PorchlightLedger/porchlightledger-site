@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /free/
 
 Sitemap: https://porchlightledger.com/sitemap.xml
