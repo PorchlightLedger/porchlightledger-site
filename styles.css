@@ -1,7 +1,7 @@
-@font-face{font-family:"DM Serif Display";src:url(fonts/dm-serif-display.woff) format("woff");font-display:swap}
-@font-face{font-family:"Source Sans Pro";src:url(fonts/source-sans-400.woff) format("woff");font-weight:400;font-display:swap}
-@font-face{font-family:"Source Sans Pro";src:url(fonts/source-sans-600.woff) format("woff");font-weight:600;font-display:swap}
-:root{--teal:#1F4E4A;--teal-d:#163a37;--sage:#DCE8E3;--sand:#F6F1E9;--terra:#C8664B;--terra-d:#ad5239;--terra-text:#A9503A;--ink:#22302e;--muted:#5b6866;--white:#fff;--r:14px;--shadow:0 10px 30px rgba(31,78,74,.10)}
+@font-face{font-family:"DM Serif Display";src:url(fonts/dm-serif-display.woff2) format("woff2"),url(fonts/dm-serif-display.woff) format("woff");font-display:swap}
+@font-face{font-family:"Source Sans Pro";src:url(fonts/source-sans-400.woff2) format("woff2"),url(fonts/source-sans-400.woff) format("woff");font-weight:400;font-display:swap}
+@font-face{font-family:"Source Sans Pro";src:url(fonts/source-sans-600.woff2) format("woff2"),url(fonts/source-sans-600.woff) format("woff");font-weight:600;font-display:swap}
+:root{--teal:#1F4E4A;--teal-d:#163a37;--sage:#DCE8E3;--sand:#F6F1E9;--terra:#C8664B;--terra-d:#ad5239;--terra-dd:#8f402b;--terra-text:#A9503A;--ink:#22302e;--muted:#5b6866;--white:#fff;--r:14px;--shadow:0 10px 30px rgba(31,78,74,.10)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
 body{margin:0;font:400 18px/1.6 "Source Sans Pro",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--sand)}
@@ -29,8 +29,8 @@ section{padding:88px 0}
 .btn:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--terra);outline-offset:2px}
 .btn-ghost{background:transparent;color:var(--teal)}
 .btn-ghost:hover{background:var(--sage)}
-.btn-warm{background:var(--terra);border-color:var(--terra)}
-.btn-warm:hover{background:var(--terra-d)}
+.btn-warm{background:var(--terra-d);border-color:var(--terra-d)}
+.btn-warm:hover{background:var(--terra-dd);border-color:var(--terra-dd)}
 .btn-small{padding:8px 18px;font-size:.95rem}
 .btn-big{padding:18px 36px;font-size:1.15rem}
 /* header */
@@ -139,6 +139,7 @@ nav a:not(.btn):hover{color:var(--terra)}
 .shop{background:#fff}
 .shop-group{font-size:1.6rem;margin:48px 0 20px;display:flex;align-items:center;gap:10px}
 .shop-group:first-of-type{margin-top:8px}
+.group-note{margin:-8px 0 20px;color:var(--muted);font-size:1rem}
 .count{font-family:"Source Sans Pro",sans-serif;font-size:.9rem;font-weight:600;background:var(--sage);color:var(--teal);border-radius:999px;padding:2px 10px}
 .shop .card{background:var(--sand);box-shadow:none;border:1px solid rgba(31,78,74,.1)}
 .card-img{position:relative;display:block}
@@ -205,3 +206,11 @@ nav a[aria-current=page]{color:var(--terra-text)}
 .hero .cta-row .btn-link{flex-basis:100%;padding:2px 2px}
 .site-header .brand{white-space:nowrap}
 @media (max-width:480px){nav .nav-keep{display:none}}
+@media (max-width:360px){
+ .wrap{padding:0 16px}
+ .nav{gap:6px}
+ nav{gap:8px}
+ .site-header .brand{font-size:1.05rem;gap:6px}
+ .site-header .brand img{width:28px;height:28px}
+ nav .btn-small{padding:6px 10px;font-size:.84rem}
+}

@@ -148,5 +148,6 @@
   form.addEventListener("change", function (e) { if (e.target.name === "method" && results.innerHTML) run(false); });
 
   if (/[?&]example\b/.test(location.search)) { fillExample(); run(false); }
+  else if (rowsEl.children.length) { seq = rowsEl.children.length; relabel(); } // two starter rows are in the HTML so the page doesn't shift
   else { addRow(); addRow(); }
 })();

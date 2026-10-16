@@ -35,8 +35,18 @@ PRODUCTS = [
  P("4587775584","Home Maintenance Schedule","home-maintenance","5.99","Seasonal checklists and a repair log so small fixes don't become big ones.","home"),
  P("4587819474","Utility Bill Tracker","utility-bill","4.99","Log energy bills and usage to spot changes month to month.","home"),
  P("4587775796","Mileage Log","mileage-log","5.99","Record business and personal trips in one simple log.","home"),
+ P("4592768937","Kids Chore Chart & Earnings Log","kids-chore-chart","4.99","A 5-page printable with family jobs and paid jobs on separate charts and an earnings log, for ages 6 to 9.","kids"),
+ P("4592785658","Kids Savings Goal Coloring Chart","kids-savings-goal","3.99","A 5-page coloring printable with a 20-coin jar, a 30-step path and a 50-coin goal chart, for ages 6 to 9.","kids"),
+ P("4592786060","Needs vs Wants Sorting Game","kids-needs-wants","4.99","A cut-out game with 24 needs and wants cards, a sorting mat and 12 blank cards, for ages 6 to 9.","kids"),
+ P("4592786860","Weekly Kids Money Tracker","kids-money-tracker","3.99","A 4-page printable with a money week page, Spend, Save and Give jars and a money month page, for ages 6 to 9.","kids"),
+ P("4592772241","Kids Money Printables Bundle","kids-bundle","9.99","Includes the chore chart, savings goal chart, needs vs. wants game and weekly money tracker for ages 6 to 9.","kids"),
 ]
-GROUPS = [("bundle","All-in-one bundle"),("money","Money planners"),("home","Home &amp; family records")]
+GROUPS = [("bundle","All-in-one bundle"),("money","Money planners"),("home","Home &amp; family records"),("kids","Kids money")]
+# Optional anchor ids and intro lines for groups (the "bundle" id is already used by the bundle section).
+GROUP_ID = {"kids": "kids"}
+GROUP_NOTE = {"kids": 'Printable PDFs for ages 6 to 9. Want to try one first? <a href="jar-labels/">Get the free Money Jar Labels</a>.'}
+# Cards that carry the "All-in-one" tag even though they are not in the featured bundle group.
+TAGGED = {"4592772241"}
 BY_ID = {p["etsy_id"]: p for p in PRODUCTS}
 
 def buy_now(p):
@@ -46,7 +56,7 @@ def buy_now(p):
 
 def card(p):
     url = E + p["etsy_id"]
-    best = '<span class="tag">All-in-one</span>' if p["group"] == "bundle" else ""
+    best = '<span class="tag">All-in-one</span>' if p["group"] == "bundle" or p["etsy_id"] in TAGGED else ""
     return f'''      <article class="card{' card-wide' if p["group"] == "bundle" else ''}" id="p-{p["etsy_id"]}">
         <a class="card-img" href="{url}" target="_blank" rel="noopener">{best}<img src="img/{p["img"]}.jpg" alt="{h(p["name"])} mockup" width="800" height="600" loading="lazy"></a>
         <div class="card-body">
@@ -63,7 +73,9 @@ def shop():
     out = []
     for g, label in GROUPS:
         items = [p for p in PRODUCTS if p["group"] == g]
-        out.append(f'    <h3 class="shop-group">{label} <span class="count">{len(items)}</span></h3>\n    <div class="grid">\n' + "\n".join(card(p) for p in items) + "\n    </div>")
+        gid = f' id="{GROUP_ID[g]}"' if g in GROUP_ID else ""
+        note = f'    <p class="group-note">{GROUP_NOTE[g]}</p>\n' if g in GROUP_NOTE else ""
+        out.append(f'    <h3 class="shop-group"{gid}>{label} <span class="count">{len(items)}</span></h3>\n{note}    <div class="grid">\n' + "\n".join(card(p) for p in items) + "\n    </div>")
     return "\n".join(out)
 
 def plink(i):

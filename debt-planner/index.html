@@ -17,7 +17,9 @@
 <meta property="og:url" content="https://porchlightledger.com/debt-planner/">
 <meta property="og:image" content="https://porchlightledger.com/img/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preload" href="../fonts/dm-serif-display.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="../fonts/dm-serif-display.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/source-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/source-sans-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="planner.css">
 </head>
@@ -28,6 +30,7 @@
     <a class="brand" href="/" aria-label="Porchlight Ledger home"><img src="../favicon.svg" alt="" width="32" height="32"> Porchlight Ledger</a>
     <nav aria-label="Main">
       <a href="/#shop">Shop</a>
+      <a href="/#kids">Kids</a>
       <a href="/#faq">FAQ</a>
       <a href="/#free">Free worksheet</a>
       <a class="nav-keep" href="/debt-planner/" aria-current="page">Free Calculator</a>
@@ -53,7 +56,10 @@
         <legend><h2>Your debts</h2></legend>
         <p class="muted dp-help">Use the current balance, the APR from your statement, and the minimum monthly payment.</p>
         <div id="dp-errors" class="dp-errors" role="alert" tabindex="-1" hidden></div>
-        <div id="dp-rows"></div>
+        <div id="dp-rows">
+<div class="dp-row" role="group" aria-label="Debt 1"><div class="dp-field"><label for="d1-name">Name</label><div class="dp-money"><input id="d1-name" name="name" type="text" maxlength="40" autocomplete="off" placeholder="e.g. Credit card" aria-describedby="d1-name-err"></div><p class="dp-err" id="d1-name-err" hidden></p></div><div class="dp-field"><label for="d1-bal">Balance</label><div class="dp-money"><span aria-hidden="true">$</span><input id="d1-bal" name="balance" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="d1-bal-err"></div><p class="dp-err" id="d1-bal-err" hidden></p></div><div class="dp-field"><label for="d1-apr">APR</label><div class="dp-money"><input id="d1-apr" name="apr" type="number" inputmode="decimal" min="0" max="100" step="0.01" required aria-describedby="d1-apr-err"><span aria-hidden="true">%</span></div><p class="dp-err" id="d1-apr-err" hidden></p></div><div class="dp-field"><label for="d1-min">Minimum payment</label><div class="dp-money"><span aria-hidden="true">$</span><input id="d1-min" name="minPayment" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="d1-min-err"></div><p class="dp-err" id="d1-min-err" hidden></p></div><button type="button" class="dp-remove" aria-label="Remove debt 1">Remove</button></div>
+<div class="dp-row" role="group" aria-label="Debt 2"><div class="dp-field"><label for="d2-name">Name</label><div class="dp-money"><input id="d2-name" name="name" type="text" maxlength="40" autocomplete="off" placeholder="e.g. Credit card" aria-describedby="d2-name-err"></div><p class="dp-err" id="d2-name-err" hidden></p></div><div class="dp-field"><label for="d2-bal">Balance</label><div class="dp-money"><span aria-hidden="true">$</span><input id="d2-bal" name="balance" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="d2-bal-err"></div><p class="dp-err" id="d2-bal-err" hidden></p></div><div class="dp-field"><label for="d2-apr">APR</label><div class="dp-money"><input id="d2-apr" name="apr" type="number" inputmode="decimal" min="0" max="100" step="0.01" required aria-describedby="d2-apr-err"><span aria-hidden="true">%</span></div><p class="dp-err" id="d2-apr-err" hidden></p></div><div class="dp-field"><label for="d2-min">Minimum payment</label><div class="dp-money"><span aria-hidden="true">$</span><input id="d2-min" name="minPayment" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="d2-min-err"></div><p class="dp-err" id="d2-min-err" hidden></p></div><button type="button" class="dp-remove" aria-label="Remove debt 2">Remove</button></div>
+</div>
         <div class="dp-row-actions">
           <button type="button" class="btn btn-ghost btn-small" id="dp-add">+ Add a debt</button>
           <button type="button" class="btn btn-ghost btn-small" id="dp-example">Fill in an example</button>
@@ -114,7 +120,7 @@
     </div>
   </div>
   <div class="wrap foot-bottom">
-    <p>© 2026 Porchlight Ledger · <a href="/privacy.html">Privacy</a> · <a href="/debt-planner/">Debt Payoff Calculator</a> · Etsy is a trademark of Etsy, Inc. This site is not affiliated with Etsy. Planners are for organizing and are not financial advice.</p>
+    <p>© 2026 Porchlight Ledger · <a href="/privacy.html">Privacy</a> · <a href="/debt-planner/">Debt Payoff Calculator</a> · <a href="/jar-labels/">Free Jar Labels</a> · Etsy is a trademark of Etsy, Inc. This site is not affiliated with Etsy. Planners are for organizing and are not financial advice.</p>
   </div>
 </footer>
 <script src="payoff.js"></script>
